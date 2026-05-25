@@ -39,11 +39,11 @@ query  →  BM25 (FTS5) top-30
 
 ## 三种检索模式
 
-| 模式 | 流程 | API 调用 | 单次耗时 |
+| 模式 | 流程 | API 调用 |
 |---|---|---|---|
-| `rerank`(默认) | embed + bm25 + RRF + qwen3-rerank | 2 次 | ~600-1000ms |
-| `hybrid` | embed + bm25 + RRF | 1 次 | ~200-400ms |
-| `bm25` | 纯 FTS5 关键词 | 0 次 | ~5ms |
+| `rerank`(默认) | embed + bm25 + RRF + qwen3-rerank | 2 次 |
+| `hybrid` | embed + bm25 + RRF | 1 次 |
+| `bm25` | 纯 FTS5 关键词 | 0 次 |
 
 MCP / Web UI 都暴露了 `mode` 参数现场切换`(query, mode, 过滤器)` 命中会落进内存 LRU(默认 200 条) 二次调用 ~1ms 重启失效
 
