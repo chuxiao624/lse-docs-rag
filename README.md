@@ -40,7 +40,7 @@ query  →  BM25 (FTS5) top-30
 ## 三种检索模式
 
 | 模式 | 流程 | API 调用 |
-|---|---|---|---|
+|---|---|---|
 | `rerank`(默认) | embed + bm25 + RRF + qwen3-rerank | 2 次 |
 | `hybrid` | embed + bm25 + RRF | 1 次 |
 | `bm25` | 纯 FTS5 关键词 | 0 次 |
