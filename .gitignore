@@ -1,0 +1,11 @@
+
+.vscode/
+node_modules/
+.env
+.env.local
+.env.*.local
+data/chunks.jsonl
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm

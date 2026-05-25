@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LLSE Docs RAG · Search Probe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>LLSE Docs RAG <span class="sub">· Search Probe</span></h1>
+    <div class="header-meta" id="headerMeta"></div>
+  </header>
+
+  <main>
+    <form id="searchForm">
+      <input
+        id="query"
+        type="search"
+        placeholder="例如：怎么传送玩家 · pl.inWater · NBT 转 JSON · 玩家进服事件"
+        autofocus
+        autocomplete="off"
+      >
+      <button type="submit" id="searchBtn">Search</button>
+    </form>
+
+    <div class="filters">
+      <label>
+        <span>Namespace</span>
+        <select id="namespace">
+          <option value="">All</option>
+        </select>
+      </label>
+      <label>
+        <span>Class</span>
+        <select id="class">
+          <option value="">All</option>
+        </select>
+      </label>
+      <label>
+        <span>Kind</span>
+        <select id="kind">
+          <option value="">All</option>
+          <option value="method">method</option>
+          <option value="property">property</option>
+          <option value="event">event</option>
+          <option value="enum">enum</option>
+          <option value="enum_value">enum_value</option>
+          <option value="property_table">property_table</option>
+          <option value="concept">concept</option>
+          <option value="guide">guide</option>
+        </select>
+      </label>
+      <label>
+        <span>Limit</span>
+        <input id="limit" type="number" min="1" max="20" value="10">
+      </label>
+      <label>
+        <span>Mode</span>
+        <select id="mode">
+          <option value="rerank">Rerank (best · 2 API)</option>
+          <option value="hybrid">Hybrid (no rerank · 1 API)</option>
+          <option value="bm25">BM25 only (0 API)</option>
+        </select>
+      </label>
+      <label class="toggle">
+        <input id="fresh" type="checkbox">
+        <span>Skip cache</span>
+      </label>
+      <button type="button" id="clearCache" class="ghost">Clear cache</button>
+    </div>
+
+    <div id="status" class="status">输入查询开始搜索 · 试试中文、英文 API 名、或自然语言描述</div>
+    <div id="results"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

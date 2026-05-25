@@ -1,0 +1,20 @@
+{
+  "name": "lse-docs-rag",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "RAG tooling for LegacyScriptEngine docs",
+  "scripts": {
+    "chunk": "node tools/chunker.js",
+    "build": "node tools/build_index.js",
+    "probe": "node tools/probe.js",
+    "serve": "node src/mcp_server.js",
+    "web": "node src/web/server.js",
+    "test:mcp": "node tools/test_mcp.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "better-sqlite3": "^12.10.0",
+    "sqlite-vec": "^0.1.9"
+  }
+}
