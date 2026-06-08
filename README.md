@@ -6,7 +6,7 @@
 
 **这是个练手项目 没什么实用价值 , 你完全可以使用context7 MCP 代替 或者让模型自己grep**
 
-## 灵感 API 💡 API: https://docs.chuxiao.top/idea/save 
+## 灵感 API 💡 API: https://docs.chuxiao.top/idea/save2 
 
 LLSE 全部 API 文档加起来也就 百来个 chunk 几 MB markdown对这种体量的语料:
 
